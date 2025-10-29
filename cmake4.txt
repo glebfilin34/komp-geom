@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.16)
+project(ConvexHull)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
+
+qt6_wrap_cpp(MOC_SOURCES convex_hull.h)
+
+add_executable(convex_hull_app main.cpp convex_hull.cpp ${MOC_SOURCES}
+    convex_hull.h)
+target_link_libraries(convex_hull_app Qt6::Core Qt6::Widgets)
