@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.16)
+project(PolygonOperations)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
+
+qt6_wrap_cpp(MOC_SOURCES polygon_ops.h)
+
+add_executable(polygon_ops main.cpp polygon_ops.cpp ${MOC_SOURCES})
+target_link_libraries(polygon_ops Qt6::Core Qt6::Widgets)
