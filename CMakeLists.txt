@@ -10,9 +10,9 @@ qt_standard_project_setup()
 
 qt_add_executable(SegmentPointPosition main.cpp)
 
-# Используем ключевой стиль для совместимости с Qt6
 target_link_libraries(SegmentPointPosition
     PRIVATE
         Qt6::Core
         Qt6::Widgets
 )
+
